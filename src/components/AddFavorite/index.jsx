@@ -23,6 +23,10 @@ const AddFavorite = ({ id }) => {
         let listId = localStorage.getItem("listId");
         const email = localStorage.getItem("userEmail");
 
+        if (!email || !listId) {
+          router.push(`/lista-de-favoritos`);
+        }
+
         if (!listId && email) {
           const res = await fetch(`${baseUrl}/favorites/lists/user/${email}`);
 
@@ -35,7 +39,7 @@ const AddFavorite = ({ id }) => {
           }
         }
 
-        if (!listId) return;
+        
 
         const res = await fetch(`${baseUrl}/favorites/lists/${listId}`);
 
