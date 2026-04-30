@@ -105,7 +105,7 @@ const MyFavoriteList = () => {
               if (!item?.referencia) return null;
 
               const response = await fetch(
-                `${baseUrl}/api/building/${item?.referencia}`,
+                `${baseUrl}/building/${item?.referencia}`,
               );
 
               const buildingJson = await response.json();
