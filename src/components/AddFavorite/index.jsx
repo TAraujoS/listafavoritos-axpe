@@ -15,7 +15,7 @@ import {
 const AddFavorite = ({ id }) => {
   const [isFavorite, setIsFavorite] = useState(false)
   const [showToast, setShowToast] = useState(false)
-  const baseUrl = process.env.config?.apiUrl;
+  const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   useEffect(() => {
     const checkFavorite = async () => {

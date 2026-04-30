@@ -16,7 +16,7 @@ const slugify = (text) =>
 const FavoriteListForm = ({ data }) => {
   const [ name, setName ] = useState("")
   const [ loading, setLoading ] = useState(false)
-  const baseUrl = process.env.config?.apiUrl;
+  const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   const router = useRouter()
 
