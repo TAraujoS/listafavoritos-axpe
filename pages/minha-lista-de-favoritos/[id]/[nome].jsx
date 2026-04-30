@@ -31,7 +31,7 @@ const MyFavoriteList = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const baseUrl = process.env.config?.apiUrl;
+  const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
   const [shareActive, setShareActive] = useState(false);
   const [listName, setListName] = useState("");
