@@ -20,16 +20,12 @@ const AddFavorite = ({ id }) => {
   const [showToast, setShowToast] = useState(false);
   const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
   const router = useRouter();
-  
+
   useEffect(() => {
     const checkFavorite = async () => {
       try {
         let listId = localStorage.getItem("listId");
         const email = localStorage.getItem("userEmail");
-
-        if (!email || !listId) {
-          router.push(`/lista-de-favoritos`);
-        }
 
         if (!listId && email) {
           const res = await fetch(`${baseUrl}/favorites/lists/user/${email}`);
@@ -65,6 +61,10 @@ const AddFavorite = ({ id }) => {
   const handleToggleFavorite = async () => {
     let listId = localStorage.getItem("listId");
     const email = localStorage.getItem("userEmail");
+
+    if (!email || !listId) {
+      router.push(`/lista-de-favoritos`);
+    }
 
     if (!listId) {
       const res = await fetch(`${baseUrl}/favorites/lists/user/${email}`);
