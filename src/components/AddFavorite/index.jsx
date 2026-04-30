@@ -4,6 +4,9 @@ import SVG from "react-inlinesvg";
 import FavoriteOutlineIcon from "assets/favorite-outline-icon.svg";
 import FavoriteFillIcon from "assets/favorite-fill-icon.svg";
 
+import { useRouter } from "next/router";
+
+
 import {
   ToastContainer,
   ToastWrapper,
@@ -16,7 +19,8 @@ const AddFavorite = ({ id }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [showToast, setShowToast] = useState(false);
   const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
-
+  const router = useRouter();
+  
   useEffect(() => {
     const checkFavorite = async () => {
       try {
