@@ -40,7 +40,7 @@ function Building(props) {
   const [similarBuildings, setSimilarBuildings] = useState([]);
   const [data, setData] = useState(null);
   const router = useRouter();
-  const baseUrl = "https://www.axpe.com.br";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.axpe.com.br";
   const canonicalUrl = `${baseUrl}${router.asPath.split("?")[0]}`;
 
   function useLighthouseFlag() {
@@ -345,8 +345,8 @@ export async function getServerSideProps({ params }) {
     ? response.building.infos.areaUsefulStart
       ? response.building.infos.areaUsefulStart
       : response.building.infos.areaTotal
-        ? response.building.infos.areaTotal
-        : response.building.infos.areaBuilding
+      ? response.building.infos.areaTotal
+      : response.building.infos.areaBuilding
     : 0;
   const buildingBedrooms = response.building.infos
     ? response.building.infos.bedroomsStart
