@@ -278,7 +278,13 @@ const MyFavoriteList = () => {
                 ))}
               </SimilarBuildingsList>
             </SimilarBuildings>
-          ) : null}
+          ) : <>
+            <picture> 
+              <source media="(max-width: 768px)" srcSet="/static/bg-stores-image-mob.png" /> 
+              <source media="(min-width: 769px)" srcSet="/static/bg-stores-image.png" /> 
+              <img src="/static/bg-stores-image.png" alt="Background disabled stores" style={{ width: '100%', height: 'auto' }} /> 
+            </picture>
+          </>}
         </FavoriteListContainer>
       </div>
 
