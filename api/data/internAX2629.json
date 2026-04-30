@@ -1,0 +1,97 @@
+{
+  "building": {
+    "type": "pronto",
+    "source": "sao-paulo",
+    "slug": "AX2629",
+    "title": "Casa muito confortável na Cidade Jardim. Perfeita para reunir amigos e curtir o convívio da família.",
+    "reference": "AX2629",
+    "tour360": null,
+    "content": "Casa muito confortável na Cidade Jardim. Perfeita para reunir amigos e curtir o convívio da família.",
+    "category": "Casa",
+    "address": {
+      "condominium": true,
+      "region": "SP",
+      "local": "Cidade Jardim"
+    },
+    "values": {
+      "rent": 0,
+      "release": 0,
+      "sell": 1980000,
+      "free": 0,
+      "iptu": 0,
+      "condo": 0
+    },
+    "label": {
+      "isNew": true,
+      "isExclusive": false,
+      "isFurnished": false
+    },
+    "infos": {
+      "use": "RESIDENCIAL",
+      "type": "VENDA E ALUGUEL",
+      "areaUseful": null,
+      "areaUsefulStart": null,
+      "areaUsefulEnd": null,
+      "areaTotal": "270",
+      "areaBuilding": null,
+      "areaGround": "405",
+      "bedrooms": "3",
+      "bedroomsStart": null,
+      "bedroomsEnd": null,
+      "suites": "1",
+      "parking": "3",
+      "parkingStart": null,
+      "parkingEnd": null,
+      "release": null,
+      "releaseStatus": null,
+      "releaseDelivery": null,
+      "disclaimer": null,
+      "valueOnlyRequest": false
+    },
+    "imageFeatured": {
+      "desktop": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d499440ba74c.jpg",
+      "mobile": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d499440ba74c.jpg"
+    },
+    "gallery": [
+      {
+        "tipo": "imagem",
+        "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d499440ba74c.jpg"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d499444eb103.jpg"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d499447e4f37.jpg"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d49944aa56c2.jpg"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d49944d6ad96.jpg"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d49944fe8150.jpg"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/2629/i4USr798_26295d499452a4f4a.jpg"
+      }
+    ],
+    "components": {
+      "porque-adoramos": [],
+      "destaque-1": [],
+      "destaque-2": [],
+      "destaque-3": [],
+      "galeria-imagens-texto": [],
+      "imagem-destaque": [],
+      "destaque-texto": [],
+      "destaque-texto-bullets": [],
+      "plantas": []
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "env": "production",
+  "siteUrl": "listafavoritos.axpe.com.br",
+  "apiUrl": "http://listafavoritos-admin.axpe.com.br",
+  "googleApiKey": "AIzaSyAn4jhPJpyJwgIYnYyr4Kaj1JSyg74Qoto",
+  "googleClientId": "901672099745-oq0frigilvcba217e2n8l5sj01njt134.apps.googleusercontent.com"
+}

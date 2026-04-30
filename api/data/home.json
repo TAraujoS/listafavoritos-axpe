@@ -1,0 +1,199 @@
+{
+  "hero": [
+    {
+      "id": 1,
+      "title": "Ambientes integrados e espaçosos",
+      "content": "Decoração e móveis seguem as últimas tendências de design.",
+      "images": {
+        "desktop": "https://picsum.photos/id/362/1240/700",
+        "mobile": "https://picsum.photos/id/362/375/500"
+      },
+      "link": {
+        "target": "_self",
+        "external": false,
+        "url": "/sobre"
+      }
+    },
+    {
+      "id": 2,
+      "title": "",
+      "content": "",
+      "images": {
+        "desktop": "https://picsum.photos/id/362/1240/700",
+        "mobile": "https://picsum.photos/id/362/375/500"
+      },
+      "link": {
+        "target": "_self",
+        "external": false,
+        "url": "/sobre"
+      }
+    }
+  ],
+  "components": [
+    {
+      "type": "banner",
+      "images": {
+        "desktop": "https://picsum.photos/id/400/1240/680",
+        "mobile": "https://picsum.photos/id/400/375/500"
+      },
+      "link": {
+        "target": "_self",
+        "external": false,
+        "url": "/sobre"
+      }
+    },
+    {
+      "type": "buildingsSquare",
+      "items": [
+        {
+          "id": 1,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 2,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        }
+      ]
+    },
+    {
+      "type": "buildingsGrid",
+      "items": [
+        {
+          "titleGreen": "Verde",
+          "titleWhite": "Branco aee",
+          "images": {
+            "desktop1": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/desktop1/82194f1d4c3572d035fb29dc3a694757ebcd1fe2.png",
+            "desktop2": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/desktop2/2d11dce8cabe02eb0607a14a66868383a624da88.png",
+            "desktop3": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/desktop3/2a27c30270a1d4b0b25d468dc9ebbc75bcfe2745.png",
+            "mobile": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/mobile/c4e96cc5bbf099dfc489accb8d2aa4ae844f5c7d.png"
+          },
+          "building": null
+        },
+        {
+          "titleGreen": "Verde 2",
+          "titleWhite": "Branco 2",
+          "images": {
+            "desktop1": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/desktop1/7a4b1daccb13bf5adcf24429560ed40eeec42d78.png",
+            "desktop2": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/desktop2/b13317d91b3036f7940580161f3bb9fcf7ead629.png",
+            "desktop3": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/desktop3/a0bf58f5d57bbe3d907232b8ee9ebc54386de986.png",
+            "mobile": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/home/mosaic/mobile/ea6e2b47be2c6b446c40b86c73eac1f3bfa2bbcf.png"
+          },
+          "building": null
+        }
+      ]
+    },
+    {
+      "type": "buildingsSeen",
+      "items": [
+        {
+          "id": 1,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 2,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 3,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 4,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        }
+      ]
+    },
+    {
+      "type": "buildingsForYou",
+      "items": [
+        {
+          "id": 1,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 2,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 3,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 4,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 5,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        },
+        {
+          "id": 6,
+          "title": "Apartamento espaçoso com cara de casa",
+          "images": {
+            "desktop": "https://picsum.photos/id/402/700/680",
+            "mobile": "https://picsum.photos/id/402/375/245"
+          },
+          "building": null
+        }
+      ]
+    },
+    {
+      "type": "contact"
+    }
+  ]
+}

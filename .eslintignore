@@ -1,0 +1,4 @@
+.next/
+public/
+src/store/enhancers
+src/store/middlewares

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato Sucesso</title>
+
+
+  <script type="text/javascript">
+    function Asc(str) {
+      return str.charCodeAt(0);
+    }
+    
+    function Chr(asciiNum) {
+      return String.fromCharCode(asciiNum)
+    }
+
+    function encriptData(data) {
+      var result = '';
+      var l;
+      var j = 0;
+      var hash = "assbdFbdpdPdpfPdAAdpeoseslsQQEcDDldiVVkadiedkdkLLnm";	
+
+      for (var i = 0; i < data.length; i++) {
+        j++;
+        l = (Asc(data.substr(i,1)) + (Asc(hash.substr(j,1))));
+
+        if (j == 50) {
+          j = 1;
+        }
+
+        if (l > 255) {
+          l -= 256;
+        }
+
+        result += (Chr(l));
+      }
+
+      return result;
+    }
+  </script>
+</head>
+<body>
+
+
+  <div class="success-detect"></div>
+
+  <script type="text/javascript">
+    if(window.dataLayer) {
+      var encriptedEmail = null;
+      var anonymousId = '';
+      let params = new URLSearchParams(location.search);
+      let email = params.get('email');
+
+      if (email) {
+        encriptedEmail = encriptData(email);
+      }
+
+      if (localStorage) {
+        localStorage.setItem('cryptoId', encriptedEmail);
+        anonymousId = localStorage.anonymousId;
+      }
+
+      dataLayer.push({
+        event: 'Form Response',
+        formType: 'Institucional - Contato',
+        formResult: 'Sucesso',
+        formMessage: '',
+        cryptoId: encriptedEmail,
+        anonymousId: anonymousId
+      }); 
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "slug": "vintage",
+      "title": "Vintage",
+      "subtitle": "Imóveis que estão na história e na memória da cidade"
+    },
+    {
+      "slug": "arquitetura",
+      "title": "Arquitetura de autor",
+      "subtitle": "Imóveis assinados por profissionais respeitados pela qualidade arquitetônica de seus projetos"
+    },
+    {
+      "slug": "especial",
+      "title": "Clássico contemporâneo",
+      "subtitle": "Imóveis com um toque diferente"
+    },
+    {
+      "slug": "mirante",
+      "title": "Mirante",
+      "subtitle": "Vistas incríveis para encher os olhos e alegrar a alma"
+    },
+    {
+      "slug": "verde",
+      "title": "Verde que te quero verde",
+      "subtitle": "Jardins grandes ou pequenos para quem gosta da vida tão verde quanto colorida"
+    },
+    {
+      "slug": "descolados",
+      "title": "Descolados",
+      "subtitle": "Soluções espertas para um imóvel despojado"
+    }
+  ]
+}

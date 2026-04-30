@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato Sucesso</title>
+  <link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700|Raleway:300,400,500,600,700,800,900&display=swap" rel="stylesheet"></link>
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/style.css?v=1.1">
+
+
+
+  <script type="text/javascript">
+    function Asc(str) {
+      return str.charCodeAt(0);
+    }
+    
+    function Chr(asciiNum) {
+      return String.fromCharCode(asciiNum)
+    }
+
+    function encriptData(data) {
+      var result = '';
+      var l;
+      var j = 0;
+      var hash = "assbdFbdpdPdpfPdAAdpeoseslsQQEcDDldiVVkadiedkdkLLnm";	
+
+      for (var i = 0; i < data.length; i++) {
+        j++;
+        l = (Asc(data.substr(i,1)) + (Asc(hash.substr(j,1))));
+
+        if (j == 50) {
+          j = 1;
+        }
+
+        if (l > 255) {
+          l -= 256;
+        }
+
+        result += (Chr(l));
+      }
+
+      return result;
+    }
+  </script>
+</head>
+<body>
+
+
+
+  <div class="success">
+    <button type="button" class="header__close header__close--white js-reset-iframe-url">Fechar</button>
+    <div class="success-text">
+      <h3>Pronto!</h3>
+      <p>Sua mensagem foi enviada com sucesso.<br/>Responderemos rapidamente.</p>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    if(window.dataLayer) {
+      var encriptedEmail = null;
+      var anonymousId = '';
+      let params = new URLSearchParams(location.search);
+      let email = params.get('email');
+
+      if (email) {
+        encriptedEmail = encriptData(email);
+      }
+
+      if (localStorage) {
+        localStorage.setItem('cryptoId', encriptedEmail);
+        anonymousId = localStorage.anonymousId;
+      }
+
+      dataLayer.push({
+        event: 'Form Response',
+        formType: 'Produto - Contato',
+        formResult: 'Sucesso',
+        formMessage: '',
+        cryptoId: encriptedEmail,
+        anonymousId: anonymousId
+      }); 
+    }
+  </script>
+  <script>
+    function closeFlow() {
+      if (window.top !== window.self) {
+        window.parent.postMessage({ type: 'ZOHO_SUCCESS_CLOSE' }, 'https://www.axpe.com.br');
+        return;
+      }
+      location.replace('https://www.axpe.com.br/');
+    }
+  
+    document.addEventListener('DOMContentLoaded', () => {
+      document
+        .querySelector('.js-reset-iframe-url')
+        ?.addEventListener('click', closeFlow);
+    });
+  </script>
+</body>
+</html>

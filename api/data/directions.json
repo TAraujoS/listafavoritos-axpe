@@ -1,0 +1,157 @@
+{
+  "geocoded_waypoints": [
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJURDUGOoe35QRTCuoP8qrKkY",
+      "types": ["establishment", "point_of_interest"]
+    },
+    {
+      "geocoder_status": "OK",
+      "place_id": "ChIJBaURe8ge35QRymy01RHXNHg",
+      "types": ["premise"]
+    }
+  ],
+  "routes": [
+    {
+      "bounds": {
+        "northeast": {
+          "lat": -26.8931829,
+          "lng": -49.0970316
+        },
+        "southwest": {
+          "lat": -26.9047955,
+          "lng": -49.1002011
+        }
+      },
+      "copyrights": "Dados do mapa ©2019",
+      "legs": [
+        {
+          "distance": {
+            "text": "1,6 km",
+            "value": 1585
+          },
+          "duration": {
+            "text": "4 minutos",
+            "value": 235
+          },
+          "end_address": "R. Tomé Venera dos Santos, 208 - Escola Agrícola, Blumenau - SC, 89037-530, Brasil",
+          "end_location": {
+            "lat": -26.9047955,
+            "lng": -49.1000063
+          },
+          "start_address": "R. Ricardo Paul, 118 - Escola Agrícola, Blumenau - SC, 89037-680, Brasil",
+          "start_location": {
+            "lat": -26.8931829,
+            "lng": -49.0970316
+          },
+          "steps": [
+            {
+              "distance": {
+                "text": "0,1 km",
+                "value": 148
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 30
+              },
+              "end_location": {
+                "lat": -26.8933959,
+                "lng": -49.098501
+              },
+              "html_instructions": "Siga para <b>oeste</b> na <b>R. Henrique Probst</b> em direção a <b>R. Benjamin Constant</b>",
+              "polyline": {
+                "points": "jqccDlgtjHHZHf@?DFtAFjAFx@"
+              },
+              "start_location": {
+                "lat": -26.8931829,
+                "lng": -49.0970316
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "1,1 km",
+                "value": 1098
+              },
+              "duration": {
+                "text": "2 minutos",
+                "value": 135
+              },
+              "end_location": {
+                "lat": -26.902932,
+                "lng": -49.09803350000001
+              },
+              "html_instructions": "Vire <b>à esquerda</b> na 1.ª intersecção para <b>R. Benjamin Constant</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "vrccDrptjHP?R?pABF?R@n@DND|@Th@NrCn@`ATxAXd@@H?`@AVCPEFCJCRGnEaBFAFCl@Oj@OPKRK`Aa@hAc@ZKJCLCJ@vADv@Dt@BV@Z?t@@T@VB|@@F?nC?"
+              },
+              "start_location": {
+                "lat": -26.8933959,
+                "lng": -49.098501
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "0,3 km",
+                "value": 292
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 53
+              },
+              "end_location": {
+                "lat": -26.9044108,
+                "lng": -49.1002011
+              },
+              "html_instructions": "Vire <b>à direita</b> em direção a <b>R. Mato Grosso</b>",
+              "maneuver": "turn-right",
+              "polyline": {
+                "points": "hnecDtmtjHH\\DNJ\\Rn@DF@B@?FFHDL@j@CF@F?DB@BHHFHDH@DN\\DJ^fALZj@`B"
+              },
+              "start_location": {
+                "lat": -26.902932,
+                "lng": -49.09803350000001
+              },
+              "travel_mode": "DRIVING"
+            },
+            {
+              "distance": {
+                "text": "47 m",
+                "value": 47
+              },
+              "duration": {
+                "text": "1 min",
+                "value": 17
+              },
+              "end_location": {
+                "lat": -26.9047955,
+                "lng": -49.1000063
+              },
+              "html_instructions": "Vire à <b>esquerda</b>",
+              "maneuver": "turn-left",
+              "polyline": {
+                "points": "pwecDf{tjHTKTINGPG"
+              },
+              "start_location": {
+                "lat": -26.9044108,
+                "lng": -49.1002011
+              },
+              "travel_mode": "DRIVING"
+            }
+          ],
+          "traffic_speed_entry": [],
+          "via_waypoint": []
+        }
+      ],
+      "overview_polyline": {
+        "points": "jqccDlgtjHRbAFzANdCd@?|CJjGzAzCn@n@@x@EXIvFoBt@S|@[tAm@dBo@XGbBF`DJ`DHvC?Nl@^lAFJHFVFr@ALBX`@v@vBx@|Bj@U`@O"
+      },
+      "summary": "R. Benjamin Constant",
+      "warnings": [],
+      "waypoint_order": []
+    }
+  ],
+  "status": "OK"
+}

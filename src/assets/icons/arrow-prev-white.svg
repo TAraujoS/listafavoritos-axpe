@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="21px" viewBox="0 0 14 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Icon / Keyboard Arrow - Right / Two-toned Copy 5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="14.5439153 29.3587302 22.2984127 21.5873016 14.5439153 13.815873 16.9312169 11.4285714 27.0899471 21.5873016 16.9312169 31.7460317"></polygon>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HOME" transform="translate(-30.000000, -526.000000)">
+            <g id="navigation" transform="translate(18.000000, 513.000000)">
+                <g id="Icon-/-Keyboard-Arrow---Right-/-Two-toned-Copy-4" transform="translate(20.000000, 25.000000) scale(-1, -1) translate(-20.000000, -25.000000) translate(0.000000, 5.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero"></g>
+                    <g id="✱-/-Color-/-Icons-/-Selected-/-On-Surface-/-Inactive" mask="url(#mask-2)" fill="#37474F" fill-rule="evenodd">
+                        <rect id="Rectangle" x="0" y="0" width="40.8987654" height="40.8987654"></rect>
+                    </g>
+                    <rect id="Rectangle-3" stroke="#979797" stroke-width="0.888888889" fill="#FFFFFF" fill-rule="evenodd" mask="url(#mask-2)" x="3.83068783" y="7.21693122" width="31.2804233" height="29.5873016"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

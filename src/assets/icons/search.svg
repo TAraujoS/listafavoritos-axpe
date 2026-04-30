@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="18px" viewBox="0 0 15 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu-Mobile-/-01" transform="translate(-292.000000, -26.000000)" stroke="#3F5A5E">
+            <g id="menu-interno">
+                <g id="Group" transform="translate(293.000000, 27.000000)">
+                    <path d="M6,12 C9.3137085,12 12,9.3137085 12,6 C12,2.6862915 9.3137085,0 6,0 C2.6862915,0 0,2.6862915 0,6 C0,9.3137085 2.6862915,12 6,12 Z" id="Oval"></path>
+                    <path d="M9,11 L13,17" id="Path-2"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

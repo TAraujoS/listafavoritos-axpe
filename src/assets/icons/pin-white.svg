@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="48px" viewBox="0 0 34 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14,39.8491355 C6.62832584,29.7912515 0.767242979,19.841064 0.767242979,12.7396806 C0.767242979,5.63829713 6.70501857,0.150864468 14,0.150864468 C21.2949814,0.150864468 27.232757,4.59154473 27.232757,12.7396806 C27.232757,18.1717711 22.821838,27.2082561 14,39.8491355 Z" id="path-1"></path>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Interna-de-Busca---Prontos-pra-morar" transform="translate(-44.000000, -3387.000000)">
+            <g id="Group-26" transform="translate(16.000000, 3238.000000)">
+                <g id="Group-8" transform="translate(31.000000, 152.000000)">
+                    <g id="Page-1">
+                        <g id="Fill-4">
+                            <use stroke="#FFFFFF" stroke-width="6" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <use stroke="#37474F" stroke-width="1" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                    <circle id="Oval" stroke="#37474F" cx="14" cy="13" r="6"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

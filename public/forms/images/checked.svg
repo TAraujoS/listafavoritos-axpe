@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon / Done / Filled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="8.08160364 14.4685054 4.2874609 10.7383526 3 12.0040999 8.08160364 17 19 6.2657473 17.7125391 5"></polygon>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Busca-Imoveis-07---SP-7" transform="translate(-330.000000, -286.000000)">
+            <g id="Group">
+                <g id="Icon-/-Done-/-Filled" transform="translate(327.000000, 281.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero"></g>
+                    <g id="✱-/-Color-/-Icons-/-Selected-/-On-Surface-/-Inactive" mask="url(#mask-2)" fill="#EE6900" fill-rule="evenodd">
+                        <rect id="Rectangle" x="0" y="0" width="22" height="22"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

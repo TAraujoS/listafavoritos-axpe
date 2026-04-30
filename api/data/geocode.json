@@ -1,0 +1,64 @@
+{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "89035-360",
+          "short_name": "89035-360",
+          "types": ["postal_code"]
+        },
+        {
+          "long_name": "Vila Nova",
+          "short_name": "Vila Nova",
+          "types": ["political", "sublocality", "sublocality_level_1"]
+        },
+        {
+          "long_name": "Blumenau",
+          "short_name": "Blumenau",
+          "types": ["administrative_area_level_2", "political"]
+        },
+        {
+          "long_name": "Santa Catarina",
+          "short_name": "SC",
+          "types": ["administrative_area_level_1", "political"]
+        },
+        {
+          "long_name": "Brasil",
+          "short_name": "BR",
+          "types": ["country", "political"]
+        }
+      ],
+      "formatted_address": "Vila Nova, Blumenau - SC, 89035-360, Brasil",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": -26.9040582,
+            "lng": -49.0882946
+          },
+          "southwest": {
+            "lat": -26.9061099,
+            "lng": -49.09195949999999
+          }
+        },
+        "location": {
+          "lat": -26.9050821,
+          "lng": -49.09008009999999
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": -26.9037350697085,
+            "lng": -49.0882946
+          },
+          "southwest": {
+            "lat": -26.9064330302915,
+            "lng": -49.09195949999999
+          }
+        }
+      },
+      "place_id": "ChIJn2jQktEe35QRnr7VVvzxO7s",
+      "types": ["postal_code"]
+    }
+  ],
+  "status": "OK"
+}

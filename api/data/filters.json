@@ -1,0 +1,53 @@
+{
+  "sao-paulo": {
+    "title": "São Paulo",
+    "use": [
+      {
+        "title": "Morar",
+        "items": ["Apartamento", "Casa"]
+      },
+      {
+        "title": "Trabalhar",
+        "items": ["Sala", "Casa"]
+      }
+    ],
+    "types": ["Prontos", "Lançamentos"],
+    "regions": ["Alto da Lapa", "Bela Vista"],
+    "filters": {
+      "values": [55000, 100000],
+      "area": [55, 220],
+      "bedrooms": [0, 5],
+      "parking": [0, 3]
+    }
+  },
+  "praia": {
+    "title": "Praia",
+    "use": [
+      {
+        "title": "Comprar",
+        "items": ["Casa", "Casa em condomínio"]
+      },
+      {
+        "title": "Alugar",
+        "items": ["Sala"]
+      }
+    ],
+    "types": ["Comprar", "Alugar", "Temporada"],
+    "regions": [
+      {
+        "title": "Bahia",
+        "items": ["Serra Grande", "Trancoso"]
+      },
+      {
+        "title": "Rio de Janeiro",
+        "items": ["Paraty"]
+      }
+    ],
+    "filters": {
+      "values": [55000, 100000],
+      "area": [55, 220],
+      "bedrooms": [0, 5],
+      "parking": [0, 3]
+    }
+  }
+}

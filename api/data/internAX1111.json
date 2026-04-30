@@ -1,0 +1,297 @@
+{
+  "building": {
+    "type": "lancamento",
+    "source": "sao-paulo",
+    "slug": "AX1111",
+    "title": null,
+    "reference": "AX1111",
+    "tour360": null,
+    "content": null,
+    "category": "Apartamento",
+    "label": {
+      "isExclusive": false,
+      "isNew": false,
+      "isFurnished": false
+    },
+    "address": {
+      "condominium": false,
+      "region": null,
+      "local": "Consolação"
+    },
+    "values": {
+      "rent": 0,
+      "release": 300000,
+      "sell": 0,
+      "iptu": 0,
+      "condo": 0,
+      "free": 0
+    },
+    "infos": {
+      "use": "RESIDENCIAL",
+      "type": "VENDA",
+      "areaUseful": null,
+      "areaUsefulStart": "100",
+      "areaUsefulEnd": "200",
+      "areaTotal": null,
+      "areaBuilding": null,
+      "areaGround": null,
+      "bedrooms": null,
+      "bedroomsStart": "2",
+      "bedroomsEnd": "4",
+      "suites": null,
+      "parking": null,
+      "parkingStart": "1",
+      "parkingEnd": "3",
+      "release": null,
+      "releaseStatus": "Breve lançamento",
+      "releaseDelivery": "Dez de 2019",
+      "disclaimer": "Disclaimer",
+      "valueOnlyRequest": false
+    },
+    "imageFeatured": {
+      "desktop": null,
+      "mobile": null
+    },
+    "gallery": [
+      {
+        "tipo": "imagem",
+        "src": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/imoveis/galeria/c73f626125ef8b38f1744e8f4e3d95eaaacd840e.png"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/imoveis/galeria/4551c23ee55b1c8c7d582932f53d4b5496601d45.png"
+      },
+      {
+        "tipo": "imagem",
+        "src": "http://futurebrandftp.com.br/projetos/axpe/painel/uploads/images/imoveis/galeria/802c82a24ba9421876bfcf6165fea9283379f491.png"
+      }
+    ],
+    "components": [
+      {
+        "module": {
+          "slug": "vizinhanca",
+          "title": "Vizinhança"
+        },
+        "data": {
+          "cep": "52050370",
+          "text": "adasdadasd"
+        }
+      },
+      {
+        "module": {
+          "slug": "porque-adoramos",
+          "title": "Por que adoramos esse imóvel"
+        },
+        "data": [
+          {
+            "title": "Lazer  e serviços",
+            "text": "Apartamento com marcenaria inteligente e elementos de decoração no estilo contemporâneo, Iluminação surpreendente."
+          },
+          {
+            "title": "Mobiliado e decorado",
+            "text": "Apartamento com marcenaria inteligente e elementos de decoração no estilo contemporâneo, Iluminação surpreendente."
+          },
+          {
+            "title": "Ambientes integrados",
+            "text": "Apartamento com marcenaria inteligente e elementos de decoração no estilo contemporâneo, Iluminação surpreendente."
+          },
+          {
+            "title": "Automação básica",
+            "text": "Apartamento com marcenaria inteligente e elementos de decoração no estilo contemporâneo, Iluminação surpreendente."
+          },
+          {
+            "title": "Reforma charmosa",
+            "text": "Apartamento com marcenaria inteligente e elementos de decoração no estilo contemporâneo, Iluminação surpreendente."
+          }
+        ]
+      },
+      {
+        "module": {
+          "slug": "plantas",
+          "title": "Plantas"
+        },
+        "data": [
+          
+        ]
+      },
+      {
+        "module": {
+          "slug": "destaque-1",
+          "title": "Destaque 1"
+        },
+        "data": {
+          "title": "O escritório Andrade Morettin",
+          "text": "Fundado em 1997 por dois amigos, desde então vem colecionando vitórias e menções em diversos concursos no Brasil e no exterior, o que garantiu o encargo de projetos de relevância na cidade.",
+          "mediaType": "imagem",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/destaque-1/38f68598ebedd1631ab9b1a61b044e420833d3b5.png",
+          "src": null
+        }
+      },
+      {
+        "module": {
+          "slug": "destaque-1",
+          "title": "Destaque 1"
+        },
+        "data": {
+          "title": "O escritório Andrade Morettin 2",
+          "text": "Fundado em 1997 por dois amigos, desde então vem colecionando vitórias e menções em diversos concursos no Brasil e no exterior, o que garantiu o encargo de projetos de relevância na cidade.2",
+          "mediaType": "video",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/destaque-1/8c46b02140d9bec858ad0842c11ec8ff6a94035e.png",
+          "src": "https://www.youtube.com/embed/E55EIe5MqPE"
+        }
+      },
+      {
+        "module": {
+          "slug": "destaque-2",
+          "title": "Destaque 2"
+        },
+        "data": {
+          "title": "O arquiteto  João Armentano",
+          "text": "Pela escolha de materiais e mobiliários que propõem conforto, elegância, beleza e irreverência, João Armentano busca atender e superar as expectativas de \r\nseus clientes a cada novo projeto.",
+          "mediaType": "imagem",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/destaque-2/28fa5c3b675f65f93af308b1602d5ae055abe202.png",
+          "src": "https://www.youtube.com/embed/E55EIe5MqPE"
+        }
+      },
+      {
+        "module": {
+          "slug": "destaque-2",
+          "title": "Destaque 2"
+        },
+        "data": {
+          "title": "O arquiteto  João Armentano2",
+          "text": "Pela escolha de materiais e mobiliários que propõem conforto, elegância, beleza e irreverência, João Armentano busca atender e superar as expectativas de \r\nseus clientes a cada novo projeto.2",
+          "mediaType": "video",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/destaque-2/df9ccf433cd26174987e5b5a3392bc333d6b9607.png",
+          "src": "https://www.youtube.com/embed/E55EIe5MqPE"
+        }
+      },
+      {
+        "module": {
+          "slug": "destaque-3",
+          "title": "Destaque 3"
+        },
+        "data": {
+          "title": "Paisagista  Sérgio Santana",
+          "text": "Urbanismo, planejamento de desenvolvimento urbano, estudos de implantação e arquitetura da paisagem. A equipe dos escritórios Sérgio Santana, no Rio e em São Paulo, vai muito além do paisagismo.",
+          "mediaType": "imagem",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/destaque-3/c10fe6f64f5523c908fe4b10ffa0973144f1b348.png",
+          "src": null
+        }
+      },
+      {
+        "module": {
+          "slug": "destaque-3",
+          "title": "Destaque 3"
+        },
+        "data": {
+          "title": "Paisagista  Sérgio Santana2",
+          "text": "Urbanismo, planejamento de desenvolvimento urbano, estudos de implantação e arquitetura da paisagem. A equipe dos escritórios Sérgio Santana, no Rio e em São Paulo, vai muito além do paisagismo.2",
+          "mediaType": "video",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/destaque-3/81a99c6d2ff12055aed03ef0b60a46207419e77f.png",
+          "src": "https://www.youtube.com/embed/E55EIe5MqPE"
+        }
+      },
+      {
+        "module": {
+          "slug": "galeria-imagens-texto",
+          "title": "Galeria de imagens + texto"
+        },
+        "data": [
+          {
+            "title": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.",
+            "text": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado. Os espaços cuidadosamente desenhados para exalar elegância, refinamento e sofisticação recebem a expertise hoteleira singular do Rosewood Hotels & Resorts.\nAs áreas de lazer incluem duas piscinas, um bar e um lounge de caviar.",
+            "mediaType": "imagem",
+            "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/galeria-imagens-texto/fceb4fb0a42d69ddb806378c1e9fb15de4fb16a0.png",
+            "src": null,
+            "mediaSubtitle": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.",
+            "mediaText": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado. Os espaços cuidadosamente desenhados para exalar elegância, refinamento e sofisticação recebem a expertise hoteleira singular do Rosewood Hotels & Resorts.\nAs áreas de lazer incluem duas piscinas, um bar e um lounge de caviar."
+          },
+          {
+            "title": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.2",
+            "text": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado. Os espaços cuidadosamente desenhados para exalar elegância, refinamento e sofisticação recebem a expertise hoteleira singular do Rosewood Hotels & Resorts. 2",
+            "mediaType": "imagem",
+            "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/galeria-imagens-texto/8ddcc403701752426a60267c81e48104ce6d20bb.png",
+            "src": null,
+            "mediaSubtitle": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.2",
+            "mediaText": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado. Os espaços cuidadosamente desenhados para exalar elegância, refinamento e sofisticação recebem a expertise hoteleira singular do Rosewood Hotels & Resorts. 2"
+          },
+          {
+            "title": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.",
+            "text": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado. Os espaços cuidadosamente desenhados para exalar elegância, refinamento e sofisticação recebem a expertise hoteleira singular do Rosewood Hotels & Resorts.\r\nAs áreas de lazer incluem duas piscinas, um bar e um lounge de caviar.",
+            "mediaType": "video",
+            "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/galeria-imagens-texto/6c276e2c5cdd7203d76f1588791e6f94ba1f8fe7.png",
+            "src": "https://www.youtube.com/embed/E55EIe5MqPE",
+            "mediaSubtitle": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.",
+            "mediaText": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado. Os espaços cuidadosamente desenhados para exalar elegância, refinamento e sofisticação recebem a expertise hoteleira singular do Rosewood Hotels & Resorts.\r\nAs áreas de lazer incluem duas piscinas, um bar e um lounge de caviar."
+          }
+        ]
+      },
+      {
+        "module": {
+          "slug": "imagem-destaque",
+          "title": "Imagem destaque"
+        },
+        "data": {
+          "title": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.",
+          "text": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado.",
+          "mediaType": "imagem",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/imagem-destaque/a1e82c9a1b1b9171d171a421ef11539adda2dd76.png",
+          "src": null
+        }
+      },
+      {
+        "module": {
+          "slug": "imagem-destaque",
+          "title": "Imagem destaque"
+        },
+        "data": {
+          "title": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.",
+          "text": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado.",
+          "mediaType": "video",
+          "image": "https://futurebrand.com.br/projetos/axpe/painel/uploads/images/imoveis/modulos/imagem-destaque/631ed60c00735e2327db22fa7829f6bc8485f34c.png",
+          "src": "https://www.youtube.com/embed/E55EIe5MqPE"
+        }
+      },
+      {
+        "module": {
+          "slug": "destaque-texto",
+          "title": "Destaque texto + texto"
+        },
+        "data": {
+          "title": "O Cidade Matarazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo.",
+          "text1": "O magnífico prédio da antiga Maternidade Matarazzo sedia o primeiro hotel da rede Rosewood Hotels & Resorts na América do Sul. Com seis estrelas, o hotel contará com quartos e suítes distribuídos entre o prédio principal da maternidade e a nova torre projetada por Jean Nouvel, um dos arquitetos mais importantes do cenário mundial.",
+          "text2": "Os interiores criados pelo renomado designer Philippe Starck unem a história exterior do prédio e do terreno aos ambientes, que foram projetados primorosamente pelos melhores designers, usando materiais exclusivos superiores aos padrões de mercado. Os espaços cuidadosamente desenhados para exalar elegância, refinamento e sofisticação recebem a expertise hoteleira singular do Rosewood Hotels & Resorts. As áreas de lazer incluem duas piscinas, um bar e um lounge de caviar. O spa terá seis salas de tratamento e um local fitness. Os hóspedes e proprietários também poderão acessar o estúdio de música adjacente, uma sala de projeção e lojas de luxo nos jardins e pavilhões."
+        }
+      },
+      {
+        "module": {
+          "slug": "destaque-texto-bullets",
+          "title": "Destaque texto + bullets"
+        },
+        "data": {
+          "texts": {
+            "title": "O cidade Materazzo é uma tranquila ilha de cultura e lazer no coração da Avenida Paulista, nos Jardins, o corredor cultural de São Paulo",
+            "text": "O magnífico prédio da antiga Maternidade Matarazzo sedia o primeiro hotel da rede Rosewood Hotels & Resorts na América do Sul. Com seis estrelas, o hotel contará com quartos e suítes distribuídos entre o prédio principal da maternidade e a nova torre projetada por Jean Nouvel, um dos arquitetos mais importantes do cenário mundial."
+          },
+          "bullets": [
+            "Piscina",
+            "Lazer",
+            "Bullet 1",
+            "Bullet 2",
+            "Bullet 3"
+          ]
+        }
+      },
+      {
+        "module": {
+          "slug": "plantas",
+          "title": "Plantas"
+        },
+        "data": {
+          "file": "http://futurebrand.com.br/projetos/axpe/painel/storage/imoveis/modulos/planta/1571065944.pdf"
+        }
+      }
+    ]
+  }
+}

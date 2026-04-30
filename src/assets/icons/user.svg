@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="51px" viewBox="0 0 38 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 38</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="16" cy="15" r="15"></circle>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cadastrar-imóvel-(3)" transform="translate(-42.000000, -4188.000000)">
+            <g id="Group-8" transform="translate(29.000000, 4192.000000)">
+                <g id="Group-38" transform="translate(16.000000, 0.000000)">
+                    <path d="M6.66153498,25 L-0.00148565284,43.3162824 C-0.379092466,44.354303 0.15627873,45.5018958 1.19429938,45.8795027 C1.4134379,45.9592199 1.64482923,46 1.878017,46 L20,46 L20,46" id="Path-10" stroke="#37474F" stroke-width="2"></path>
+                    <path d="M17.9288324,25 L11.2658118,43.3162824 C10.888205,44.354303 11.4235762,45.5018958 12.4615968,45.8795027 C12.6807353,45.9592199 12.9121267,46 13.1453144,46 L31.2672974,46 L31.2672974,46" id="Path-10-Copy" stroke="#37474F" stroke-width="2" transform="translate(21.633649, 35.500000) scale(-1, 1) translate(-21.633649, -35.500000) "></path>
+                    <g id="Oval-3">
+                        <use stroke="#FFFFFF" stroke-width="7" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        <use stroke="#37474F" stroke-width="2" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

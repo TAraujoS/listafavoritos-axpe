@@ -1,0 +1,88 @@
+{
+  "type": "pronto",
+  "source": "sao-paulo",
+  "slug": "AX2629",
+  "title": "Muito charme neste apartamento a passos do metrô Oscar Freire, no quadrilátero amado dos Jardins.",
+  "reference": "AX2629",
+  "tour360": null,
+  "content": "Muito charme neste apartamento a passos do metrô Oscar Freire, no quadrilátero amado dos Jardins.",
+  "category": "Apartamento",
+  "address": {
+    "condominium": false,
+    "region": "SP",
+    "local": "Jardins / C. César"
+  },
+  "values": {
+    "rent": 0,
+    "release": 0,
+    "sell": 2145000,
+    "free": 0
+  },
+  "infos": {
+    "use": "RESIDENCIAL",
+    "type": "VENDA",
+    "areaUseful": null,
+    "areaUsefulStart": null,
+    "areaUsefulEnd": null,
+    "areaTotal": "155",
+    "areaBuilding": null,
+    "areaGround": null,
+    "bedrooms": "3",
+    "bedroomsStart": null,
+    "bedroomsEnd": null,
+    "suites": "2",
+    "parking": "2",
+    "parkingStart": null,
+    "parkingEnd": null,
+    "release": null,
+    "releaseStatus": null,
+    "releaseDelivery": null,
+    "disclaimer": null,
+    "valueOnlyRequest": false
+  },
+  "imageFeatured": {
+    "desktop": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b74a69e1.jpg",
+    "mobile": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b74a69e1.jpg"
+  },
+  "gallery": [
+    {
+      "tipo": "imagem",
+      "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b74a69e1.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b7a1d83b.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b7c63acd.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b7f4648d.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b818b8be.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b8384044.jpg"
+    },
+    {
+      "tipo": "imagem",
+      "src": "http://vistasoft.axpe.com.br/vistasoft//vista.imobi/fotos/57659/ioZ07ZA18MYh032X_576595bbd0b876a349.jpg"
+    }
+  ],
+  "components": {
+    "porque-adoramos": [],
+    "destaque-1": [],
+    "destaque-2": [],
+    "destaque-3": [],
+    "galeria-imagens-texto": [],
+    "imagem-destaque": [],
+    "destaque-texto": [],
+    "destaque-texto-bullets": [],
+    "plantas": []
+  }
+}
