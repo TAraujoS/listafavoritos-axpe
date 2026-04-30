@@ -55,8 +55,8 @@ const MyFavoriteList = () => {
       setDataReady(false);
 
       const [listRes, itemsRes] = await Promise.all([
-        fetch(`${baseUrl}/api/favorites/lists/${listId}`),
-        fetch(`${baseUrl}/api/favorites/lists/${listId}/items`),
+        fetch(`${baseUrl}/favorites/lists/${listId}`),
+        fetch(`${baseUrl}/favorites/lists/${listId}/items`),
       ]);
 
       const listJson = await listRes.json();
@@ -78,7 +78,7 @@ const MyFavoriteList = () => {
           console.log("userEmail", userEmail);
           try {
             const userRes = await fetch(
-              `${baseUrl}/api/favorites/lists/${list?.id}`,
+              `${baseUrl}/favorites/lists/${list?.id}`,
             );
 
             const userJson = await userRes.json();
@@ -145,7 +145,7 @@ const MyFavoriteList = () => {
 
       setLoading(true);
 
-      const res = await fetch(`${baseUrl}/api/favorites/lists/${id}`, {
+      const res = await fetch(`${baseUrl}/favorites/lists/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -186,7 +186,7 @@ const MyFavoriteList = () => {
 
       setLoading(true);
 
-      const res = await fetch(`${baseUrl}/api/favorites/lists/${id}`, {
+      const res = await fetch(`${baseUrl}/favorites/lists/${id}`, {
         method: "DELETE",
       });
 

@@ -72,7 +72,7 @@ const FavoriteList = () => {
       const email = encodeURIComponent(emailParam);
 
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/favorites/lists/user/${email}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/favorites/lists/user/${email}`,
       );
 
       if (!res.ok) {
