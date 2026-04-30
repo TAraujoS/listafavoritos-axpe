@@ -1,5 +1,5 @@
-import { getParamsFromObject } from 'helpers/utils';
-const baseMaps = 'https://maps.googleapis.com/maps/api';
+import { getParamsFromObject } from "helpers/utils";
+const baseMaps = "https://maps.googleapis.com/maps/api";
 // https://maps.googleapis.com/maps/api/geocode/json?address=52050370&key=AIzaSyAn4jhPJpyJwgIYnYyr4Kaj1JSyg74Qoto
 // https://maps.googleapis.com/maps/api/directions/json?origin=-26.9040582,-49.0882946&destination=-26.9061099,-49.09195949999999&key=AIzaSyAn4jhPJpyJwgIYnYyr4Kaj1JSyg74Qoto
 
@@ -14,7 +14,7 @@ export default {
     // AX141776  - Apartamento - pronto
 
     const result = await fetch(
-      `${process.env.config.apiUrl}/building/${reference}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/building/${reference}`,
     )
       .then((response) => response.json())
       .then((data) => data);
@@ -26,37 +26,37 @@ export default {
     const googleApiKey = process.env.config.googleApiKey;
 
     let result = await fetch(
-      `${baseMaps}/geocode/json?address=${local} ${cep}&key=${googleApiKey}`
+      `${baseMaps}/geocode/json?address=${local} ${cep}&key=${googleApiKey}`,
     )
       .then((response) => response.json())
       .then((data) => data);
 
     if (result.results.length && result.results[0].geometry) {
       result = await fetch(
-        `${baseMaps}/geocode/json?latlng=${result.results[0].geometry.location.lat},${result.results[0].geometry.location.lng}&key=${googleApiKey}`
+        `${baseMaps}/geocode/json?latlng=${result.results[0].geometry.location.lat},${result.results[0].geometry.location.lng}&key=${googleApiKey}`,
       )
         .then((response) => response.json())
         .then((data) => data);
 
       const addressRoute = result.results[0].address_components.find((x) =>
-        x.types.includes('route')
+        x.types.includes("route"),
       );
       const addressSub = result.results[0].address_components.find(
         (x) =>
-          x.types.includes('sublocality_level_1') ||
-          x.types.includes('locality')
+          x.types.includes("sublocality_level_1") ||
+          x.types.includes("locality"),
       );
       const addressAdm = result.results[0].address_components.find(
         (x) =>
-          x.types.includes('administrative_area_level_1') ||
-          x.types.includes('administrative_area_level_2')
+          x.types.includes("administrative_area_level_1") ||
+          x.types.includes("administrative_area_level_2"),
       );
 
       if (addressRoute && addressSub && addressAdm) {
         const address = `${addressRoute.long_name} ${addressSub.long_name} ${addressAdm.long_name}`;
 
         result = await fetch(
-          `${baseMaps}/geocode/json?address=${address}&key=${googleApiKey}`
+          `${baseMaps}/geocode/json?address=${address}&key=${googleApiKey}`,
         )
           .then((response) => response.json())
           .then((data) => data);
@@ -68,9 +68,9 @@ export default {
   async getDirections(northeast, southwest) {
     const googleApiKey = process.env.config.googleApiKey;
     const result = await fetch(
-      `https://cors-anywhere.herokuapp.com/${baseMaps}/directions/json?origin=${southwest.lat},${southwest.lng}&destination=${northeast.lat},${northeast.lng}&key=${googleApiKey}`
+      `https://cors-anywhere.herokuapp.com/${baseMaps}/directions/json?origin=${southwest.lat},${southwest.lng}&destination=${northeast.lat},${northeast.lng}&key=${googleApiKey}`,
     ).then((response) => response.json());
-    return result && result.status === 'OK' ? result : [];
+    return result && result.status === "OK" ? result : [];
   },
   async getSimilar(property, limit) {
     const basePrice = property.values?.sell || property.values?.release || 0;
@@ -78,23 +78,23 @@ export default {
 
     const params = {
       source: property.source,
-      use: property.infos ? property.infos.use : '',
-      finality: property.infos ? property.infos.type : '',
+      use: property.infos ? property.infos.use : "",
+      finality: property.infos ? property.infos.type : "",
       category: property.category,
-      local: property.address ? property.address.local : '',
-      furniture: property.label ? property.label.isFurnished : '',
+      local: property.address ? property.address.local : "",
+      furniture: property.label ? property.label.isFurnished : "",
       type: property.type,
       price_start: Math.floor(basePrice * (1 - margin)),
       price_end: Math.ceil(basePrice * (1 + margin)),
-      area_start: property.infos ? property.infos.areaUsefulStart : '',
-      area_end: property.infos ? property.infos.areaUsefulEnd : '',
-      bedroom_start: property.infos ? property.infos.bedroomsStart : '',
-      bedroom_end: property.infos ? property.infos.bedroomsEnd : '',
-      parking_start: property.infos ? property.infos.parkingStart : '',
-      parking_end: property.infos ? property.infos.parkingEnd : '',
+      area_start: property.infos ? property.infos.areaUsefulStart : "",
+      area_end: property.infos ? property.infos.areaUsefulEnd : "",
+      bedroom_start: property.infos ? property.infos.bedroomsStart : "",
+      bedroom_end: property.infos ? property.infos.bedroomsEnd : "",
+      parking_start: property.infos ? property.infos.parkingStart : "",
+      parking_end: property.infos ? property.infos.parkingEnd : "",
       limit,
     };
-    const url = `${process.env.config.apiUrl}/buildings/find`;
+    const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/buildings/find`;
 
     const result = await fetch(url + getParamsFromObject(params))
       .then((response) => response.json())
@@ -103,13 +103,13 @@ export default {
   },
   async getFavoritesShare(hash) {
     const response = await fetch(
-      `${process.env.config.apiUrl}/buildings/favorites/share/${hash}`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/buildings/favorites/share/${hash}`,
       {
-        method: 'GET',
+        method: "GET",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-      }
+      },
     ).then((response) => response.json());
     return response;
   },
@@ -117,11 +117,11 @@ export default {
     const formData = new FormData();
 
     const result = await fetch(
-      `${process.env.config.apiUrl}/form/register_your_building`,
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/form/register_your_building`,
       {
-        method: 'POST',
+        method: "POST",
         body: formData,
-      }
+      },
     ).then((response) => response.json());
     return result;
   },

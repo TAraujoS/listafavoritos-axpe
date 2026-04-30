@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 // import React, { useRef, useCallback, useState } from 'react';
 // import { useSelector } from 'react-redux';
 // import SVG from 'react-inlinesvg';
@@ -44,14 +44,14 @@ import { useEffect } from 'react';
 
 // import { FormGroup } from 'components/FormElements/styles';
 
-// const formSuccessPageUrl = `${process.env.config.siteUrl}/imovel-dos-sonhos/sucesso`;
+// const formSuccessPageUrl = `${process.env.NEXT_PUBLIC_FRONT_URL}/imovel-dos-sonhos/sucesso`;
 
 function DreamBuildingSingle({ type }) {
   const router = useRouter();
-  
+
   useEffect(() => {
-    router.replace('/');
-  }, [ router ]);
+    router.replace("/");
+  }, [router]);
 
   return null;
 
@@ -553,7 +553,6 @@ function DreamBuildingSingle({ type }) {
   //           <input type="hidden" name="SingleLine3" value={values.SingleLine3} />
   //           <input type="hidden" name="SingleLine4" value={values.SingleLine4} />
   //           <input type="hidden" name="SingleLine5" value={values.SingleLine5} />
-
 
   //           {type !== 'praia-campo' && type !== 'internacional' && (
   //             <input

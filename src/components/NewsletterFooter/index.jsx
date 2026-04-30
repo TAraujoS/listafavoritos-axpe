@@ -1,11 +1,17 @@
-import React, { useRef, useEffect } from 'react';
-import { useDispatch, } from 'react-redux';
+import React, { useRef, useEffect } from "react";
+import { useDispatch } from "react-redux";
 
 // actions
-import { setMain } from 'store/modules/main/actions';
+import { setMain } from "store/modules/main/actions";
 
 // styles
-import { Background, FormContainer, Iframe, NewsletterContainer, NewsletterTextDesktop } from './styles';
+import {
+  Background,
+  FormContainer,
+  Iframe,
+  NewsletterContainer,
+  NewsletterTextDesktop,
+} from "./styles";
 
 function NewsletterFooter() {
   const dispatch = useDispatch();
@@ -13,9 +19,9 @@ function NewsletterFooter() {
 
   useEffect(() => {
     if (refIframe.current) {
-      refIframe.current.onload = function() {
+      refIframe.current.onload = function () {
         const doc = this.contentDocument || this.contentWindow.document;
-        const styleEl = doc.createElement('style');
+        const styleEl = doc.createElement("style");
         styleEl.innerHTML = `
           .form {
             display: block;
@@ -62,21 +68,21 @@ function NewsletterFooter() {
         `;
 
         doc.head.appendChild(styleEl);
-        const $success = doc.querySelector('.success-detect');
+        const $success = doc.querySelector(".success-detect");
 
         if ($success) {
           dispatch(
             setMain({
-              modalNewsletterSuccess: true
-            })
+              modalNewsletterSuccess: true,
+            }),
           );
-          
-          refIframe.current.setAttribute('src', '/forms/newsletter/index.html');
+
+          refIframe.current.setAttribute("src", "/forms/newsletter/index.html");
 
           dispatch(
             setMain({
-              modalNewsletter: false
-            })
+              modalNewsletter: false,
+            }),
           );
         }
       };
@@ -90,18 +96,17 @@ function NewsletterFooter() {
         <h4>Newsletter da Axpe</h4>
         <p>Aumente as chances de encontrar o imóvel que é sua alma gêmea.</p>
 
-      <FormContainer>
-        <Iframe
-          ref={refIframe}
-          src={`${process.env.config.siteUrl}/forms/newsletter/index.html?redirectUrl=${process.env.config.siteUrl}/forms/newsletter/sucesso.html`}
-          border="none"
-          title="Newsletter"
-        />
-      </FormContainer>
+        <FormContainer>
+          <Iframe
+            ref={refIframe}
+            src={`${process.env.NEXT_PUBLIC_FRONT_URL}/forms/newsletter/index.html?redirectUrl=${process.env.NEXT_PUBLIC_FRONT_URL}/forms/newsletter/sucesso.html`}
+            border="none"
+            title="Newsletter"
+          />
+        </FormContainer>
       </NewsletterTextDesktop>
     </NewsletterContainer>
-  )
+  );
 }
 
-
-export default NewsletterFooter
+export default NewsletterFooter;

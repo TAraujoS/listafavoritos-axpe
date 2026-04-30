@@ -1,13 +1,13 @@
-import React, { useRef, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import React, { useRef, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 // import Api from 'services';
 
 // actions
-import { setMain } from 'store/modules/main/actions';
+import { setMain } from "store/modules/main/actions";
 
 // components
-import BlockHighlighted from 'components/BlockHighlighted';
+import BlockHighlighted from "components/BlockHighlighted";
 
 // styles
 import {
@@ -26,11 +26,11 @@ import {
   Pin,
   Circle,
   Rec,
-} from './styles';
+} from "./styles";
 
 const containerStyle = {
-  width: '100%',
-  height: '400px',
+  width: "100%",
+  height: "400px",
 };
 
 const center = {
@@ -44,21 +44,21 @@ function FormContact({ showHeader = true }) {
 
   useEffect(() => {
     if (refIframe.current) {
-      refIframe.current.onload = function() {
+      refIframe.current.onload = function () {
         const $contents = this.contentDocument || this.contentWindow.document;
-        const $success = $contents.querySelector('.success-detect');
+        const $success = $contents.querySelector(".success-detect");
 
         if ($success) {
           dispatch(
             setMain({
               modalContactSuccess: true,
-            })
+            }),
           );
-          refIframe.current.setAttribute('src', '/forms/contato/index.html');
+          refIframe.current.setAttribute("src", "/forms/contato/index.html");
         }
       };
     }
-  }, [ refIframe ]);
+  }, [refIframe]);
 
   return (
     <>
@@ -92,7 +92,7 @@ function FormContact({ showHeader = true }) {
             <IframeContainer>
               <Iframe
                 ref={refIframe}
-                src={`/forms/contato/index.html?redirectUrl=${process.env.config.siteUrl}/forms/contato/sucesso.html`}
+                src={`/forms/contato/index.html?redirectUrl=${process.env.NEXT_PUBLIC_FRONT_URL}/forms/contato/sucesso.html`}
                 border="none"
                 frameBorder="0"
                 title="Contato"
@@ -112,8 +112,8 @@ function FormContact({ showHeader = true }) {
                   <Balloon>
                     <h4>Nosso escritório</h4>
                     <p>
-                      Avenida Nove de Julho, 5017, 10° Andar. Jardim Paulista - São
-                      Paulo, SP
+                      Avenida Nove de Julho, 5017, 10° Andar. Jardim Paulista -
+                      São Paulo, SP
                     </p>
                     <a href="https://g.page/axpe_imoveis?share">Como chegar?</a>
                   </Balloon>

@@ -5,7 +5,7 @@
 // import * as Yup from 'yup';
 // import ScrollTo, { getElementScrollTop } from 'helpers/scrollTo';
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 // // components
 // import BlockHighlighted from 'components/BlockHighlighted';
@@ -40,7 +40,6 @@ import { useRouter } from 'next/router';
 //   FormGroupFooter,
 //   ButtonSubmit,
 // } from 'pages/Register/styles';
-
 
 // const registrySchema = Yup.object().shape({
 //   SingleLine5: Yup.string()
@@ -85,22 +84,19 @@ import { useRouter } from 'next/router';
 //   //   .required(),
 // });
 
-// const formSuccessPageUrl = `${process.env.config.siteUrl}/cadastrar/sucesso`;
+// const formSuccessPageUrl = `${process.env.NEXT_PUBLIC_FRONT_URL}/cadastrar/sucesso`;
 
 function Register({ locals, categories, countries }) {
   // const refForm = useRef(null);
   // const [ cats, setCats ] = useState([]);
 
-    const router = useRouter();
-  
-    useEffect(() => {
-      router.replace('/');
-    }, [ router ]);
-  
-    return null;
-  
+  const router = useRouter();
 
+  useEffect(() => {
+    router.replace("/");
+  }, [router]);
 
+  return null;
 
   // const optionsLocals = [
   //   { label: 'Selecione', value: '' },
