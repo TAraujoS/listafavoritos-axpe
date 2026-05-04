@@ -73,7 +73,7 @@ const MyFavoriteList = () => {
             </FavoriteHeaderTitleContainer>
           </FavoriteHeaderTitle>
 
-          <FavoriteOptions>
+          <FavoriteOptions className="favorite-options">
             <ShareButtonContainer onClick={toggleShare}>
               Compartilhar lista
               <SVG src={ShareIconSVG} />
@@ -94,7 +94,17 @@ const MyFavoriteList = () => {
             />
             Minha lista de favoritos
           </FavoriteHeaderTitleContainer>
+          <FavoriteOptions className="favorite-options">
+            <ShareButtonContainer onClick={toggleShare}>
+              Compartilhar lista
+              <SVG src={ShareIconSVG} />
+            </ShareButtonContainer>
 
+            <RemoveList>
+              Deletar
+              <SVG src={DeleteListIcon} />
+            </RemoveList>
+          </FavoriteOptions>
           <FavoriteListHeaderTexts>
             {isEditing ? (
               <input

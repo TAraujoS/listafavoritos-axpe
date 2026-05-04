@@ -15,7 +15,13 @@ export const FavoriteHeader = styled.div`
   background: #E0DFDF;
 
   ${media.lessThan("large")`
-    display: none;
+    background: transparent;
+    flex-direction: column;
+    padding: 22px 0 0;
+
+    .favorite-options {
+      display:none;
+    }
   `}
 `;
 
@@ -25,4 +31,8 @@ export const FavoriteHeaderTitle = styled.h3`
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
+
+  .favorite-options {
+    display: none;
+  }
 `;

@@ -16,7 +16,13 @@ export const FavoriteHeader = styled.div`
   background: #E0DFDF;
 
   ${media.lessThan("large")`
-    display: none;
+    background: transparent;
+    flex-direction: column;
+    padding: 22px 0 0;
+
+    .favorite-options {
+      display:none;
+    }
   `}
 `;
 
@@ -163,7 +169,7 @@ export const FavoriteListContainer = styled.div`
   }
 
   ${media.lessThan("large")`
-    padding: 31px 0 0;
+    padding: 0;
   `}
 
   ${media.greaterThan("large")`
@@ -187,6 +193,7 @@ export const FavoriteListContext = styled.p`
   ${media.lessThan("large")`
     text-align: center;
     padding: 0;
+    margin: 0 auto;
   `}
 `
 export const FavoriteListHeaderTexts = styled.div`

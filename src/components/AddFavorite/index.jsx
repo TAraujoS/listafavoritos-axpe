@@ -39,8 +39,6 @@ const AddFavorite = ({ id }) => {
           }
         }
 
-        
-
         const res = await fetch(`${baseUrl}/favorites/lists/${listId}`);
 
         const json = await res.json();
@@ -61,8 +59,11 @@ const AddFavorite = ({ id }) => {
   const handleToggleFavorite = async () => {
     let listId = localStorage.getItem("listId");
     const email = localStorage.getItem("userEmail");
+    console.log("listId",listId);
+    console.log("email",email)
 
     if (!email || !listId) {
+      localStorage.setItem("favorite_item_add", id);
       router.push(`/lista-de-favoritos`);
     }
 

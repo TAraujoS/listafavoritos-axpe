@@ -31,7 +31,6 @@ const FavoriteListForm = ({ data }) => {
     }
   }, [data, router]);
 
-  // 🔥 GET lista existente
   const checkExistingList = async (email) => {
     try {
       const res = await fetch(
@@ -43,10 +42,10 @@ const FavoriteListForm = ({ data }) => {
       if (!res.ok || !json?.success) return null;
 
       const lists = Array.isArray(json?.data?.lists)
-        ? json.data.lists
-        : json.data.lists
-        ? [json.data.lists]
-        : [];
+        ? json?.data?.lists
+        : json?.data?.lists
+          ? [json?.data?.lists]
+          : [];
 
       return lists.length > 0 ? lists[0] : null;
     } catch (err) {
@@ -55,7 +54,6 @@ const FavoriteListForm = ({ data }) => {
     }
   };
 
-  // 🔥 POST criar lista
   const createList = async (email, name) => {
     const res = await fetch(`${baseUrl}/favorites/lists`, {
       method: "POST",
@@ -82,7 +80,7 @@ const FavoriteListForm = ({ data }) => {
 
     try {
       setLoading(true);
-
+      console.log("data: ", data)
       const email = data?.user?.email;
 
       if (!email) {
@@ -90,7 +88,6 @@ const FavoriteListForm = ({ data }) => {
         return;
       }
 
-      // 🔥 verifica existência
       const existingList = await checkExistingList(email);
 
       if (existingList) {
@@ -103,11 +100,32 @@ const FavoriteListForm = ({ data }) => {
         return;
       }
 
-      // 🔥 cria lista
       const list = await createList(email, name);
 
-      const listId = list?.id;
+      if (!list?.id) return;
+
+      const listId = list.id;
       const slug = slugify(name);
+      const imovelId = localStorage.getItem("favorite_item_add");
+
+      if (!imovelId) return;
+
+      const payload = {
+        id_lista: listId,
+        id_imovel: imovelId,
+      };
+
+      const response = await fetch(`${baseUrl}/favorites/items`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) return;
+
+      localStorage.removeItem("favorite_item_add");
 
       router.push(`/minha-lista-de-favoritos/${listId}/${slug}`);
     } catch (error) {

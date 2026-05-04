@@ -40,7 +40,7 @@ const MyFavoriteList = () => {
 
   const [loading, setLoading] = useState(false);
   const [dataReady, setDataReady] = useState(false);
-  const [isOwner, setIsOwner] = useState(false); // 🔥 novo
+  const [isOwner, setIsOwner] = useState(false);
 
   const originalNameRef = useRef("");
 
@@ -192,7 +192,7 @@ const MyFavoriteList = () => {
 
       const json = await res.json();
       if (!res.ok) throw new Error(json?.message);
-
+      localStorage.removeItem("listId");
       router.push("/lista-de-favoritos");
     } catch (error) {
       console.error("Erro ao deletar lista:", error);
@@ -220,13 +220,12 @@ const MyFavoriteList = () => {
             </FavoriteHeaderTitleContainer>
           </FavoriteHeaderTitle>
 
-          <FavoriteOptions>
+          <FavoriteOptions className="favorite-options">
             <ShareButtonContainer onClick={toggleShare}>
               Compartilhar lista
               <SVG src={ShareIconSVG} />
             </ShareButtonContainer>
 
-            {/* 🔥 SÓ MOSTRA SE FOR DONO */}
             {isOwner && (
               <RemoveList onClick={handleDeleteList}>
                 Deletar
@@ -238,7 +237,7 @@ const MyFavoriteList = () => {
 
         <FavoriteListContainer>
           <FavoriteListHeaderTexts>
-            {isEditing ? (
+            {isEditing && isOwner ? (
               <input
                 autoFocus
                 value={listName}
@@ -249,17 +248,34 @@ const MyFavoriteList = () => {
             ) : (
               <FavoriteListName>
                 <p>{listName || "Minha lista"}</p>
-
-                <FavoriteEditIcon onClick={() => setIsEditing(true)}>
-                  <SVG src={EditIcon} />
-                </FavoriteEditIcon>
+                {isOwner && (
+                  <FavoriteEditIcon onClick={() => setIsEditing(true)}>
+                    <SVG src={EditIcon} />
+                  </FavoriteEditIcon>
+                )}
               </FavoriteListName>
             )}
+
+            <FavoriteOptions className="favorite-options">
+            <ShareButtonContainer onClick={toggleShare}>
+              Compartilhar lista
+              <SVG src={ShareIconSVG} />
+            </ShareButtonContainer>
+
+            {isOwner && (
+              <RemoveList onClick={handleDeleteList}>
+                Deletar
+                <SVG src={DeleteListIcon} />
+              </RemoveList>
+            )}
+          </FavoriteOptions>
 
             {items.length === 0 && (
               <FavoriteListContext>
                 Navegue pelo site e clique no coração laranja nos imóveis que
-                gostar para adicioná-los.
+                gostar para adicioná-los. Você também pode compartilhar sua lista
+                com quem quiser. Para acessar sua lista use o menu e clique em
+                Lista de Favoritos.
               </FavoriteListContext>
             )}
           </FavoriteListHeaderTexts>
@@ -282,7 +298,7 @@ const MyFavoriteList = () => {
             <picture> 
               <source media="(max-width: 768px)" srcSet="/static/bg-stores-image-mob.png" /> 
               <source media="(min-width: 769px)" srcSet="/static/bg-stores-image.png" /> 
-              <img src="/static/bg-stores-image.png" alt="Background disabled stores" style={{ width: '100%', height: 'auto' }} /> 
+              <img src="/static/bg-stores-image.png" alt="Background disabled stores" className="bg-store-image" style={{ width: '100%', height: 'auto' }} /> 
             </picture>
           </>}
         </FavoriteListContainer>
