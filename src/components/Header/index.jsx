@@ -13,9 +13,9 @@ import useScrollPosition from 'helpers/scrollPosition';
 // assets
 import InstagramIconSVG from 'assets/icons/instagram.svg';
 import WhatsappIconSVG from 'assets/icons/whatsapp.svg';
-import SearchIconSVG from 'assets/icons/search.svg';
-import HomeIconSVG from 'assets/icons/home.svg';
-import CloudIconSVG from 'assets/icons/cloud.svg';
+import SearchIconSVG from 'assets/icons/busca.svg';
+import HomeIconSVG from 'assets/icons/vender-imovel.svg';
+import CloudIconSVG from 'assets/icons/sonhar.svg';
 import AxpeFullLogoSVG from 'assets/axpe-full-logo.svg';
 import FavoriteOutlineIcon from 'assets/favorite-outline-icon.svg'
 import FavoriteFillIcon from 'assets/favorite-fill-icon.svg'
