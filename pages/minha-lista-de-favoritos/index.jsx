@@ -41,9 +41,6 @@ const MyFavoriteList = () => {
   useEffect(() => {
     if (!router.isReady) return;
     localStorage.setItem("listId", id);
-    console.log("📌 PARAMS DA URL");
-    console.log("ID:", id);
-    console.log("NOME:", nome);
 
     if (nome) {
       setListName(decodeURIComponent(nome));

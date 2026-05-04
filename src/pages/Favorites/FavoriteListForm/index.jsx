@@ -16,17 +16,13 @@ const FavoriteListForm = ({ data }) => {
 
   const router = useRouter();
 
-  console.log("Router: ", router);
   useEffect(() => {
-    console.log("data", data);
-    console.log("data?.list", data?.lists);
 
     if (data?.lists?.[0] && data?.lists[0]?.id) {
       const id = data.lists[0]?.id;
       const listName = data.lists[0].nome_da_lista || "lista";
 
       const slug = slugify(listName);
-      console.log("slug", slug);
       router.push(`/minha-lista-de-favoritos/${id}/${slug}`);
     }
   }, [data, router]);
@@ -80,7 +76,6 @@ const FavoriteListForm = ({ data }) => {
 
     try {
       setLoading(true);
-      console.log("data: ", data)
       const email = data?.user?.email;
 
       if (!email) {

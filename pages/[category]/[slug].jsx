@@ -282,7 +282,6 @@ function Building(props) {
               <h3>Pessoas que viram este imóvel também viram:</h3>
             </SimilarBuildingsHeader>
             <SimilarBuildingsList>
-              {console.log("similarBuildings", similarBuildings)}
               {similarBuildings.map((building, buildingIndex) => (
                 <BuildingList
                   layout="horizontal"

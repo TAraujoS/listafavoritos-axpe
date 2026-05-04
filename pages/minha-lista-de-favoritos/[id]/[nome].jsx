@@ -74,15 +74,12 @@ const MyFavoriteList = () => {
         const userEmail = getUserEmail();
 
         if (userEmail && list) {
-          console.log("list", list);
-          console.log("userEmail", userEmail);
           try {
             const userRes = await fetch(
               `${baseUrl}/favorites/lists/${list?.id}`,
             );
 
             const userJson = await userRes.json();
-            console.log("userJson", userJson);
             const ownerEmail = userJson?.data?.user?.email;
 
             setIsOwner(ownerEmail === userEmail);

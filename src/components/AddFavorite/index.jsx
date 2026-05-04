@@ -6,7 +6,6 @@ import FavoriteFillIcon from "assets/favorite-fill-icon.svg";
 
 import { useRouter } from "next/router";
 
-
 import {
   ToastContainer,
   ToastWrapper,
@@ -18,6 +17,7 @@ import {
 const AddFavorite = ({ id }) => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [owner, setOwner] = useState(false);
   const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
   const router = useRouter();
 
@@ -26,13 +26,15 @@ const AddFavorite = ({ id }) => {
       try {
         let listId = localStorage.getItem("listId");
         const email = localStorage.getItem("userEmail");
+        let listOwnerEmail = null;
 
         if (!listId && email) {
           const res = await fetch(`${baseUrl}/favorites/lists/user/${email}`);
-
           const json = await res.json();
 
-          listId = json?.data?.lists?.[0]?.id;
+          const list = json?.data?.lists?.[0];
+          listId = list?.id;
+          listOwnerEmail = list?.email;
 
           if (listId) {
             localStorage.setItem("listId", listId);
@@ -40,15 +42,17 @@ const AddFavorite = ({ id }) => {
         }
 
         const res = await fetch(`${baseUrl}/favorites/lists/${listId}`);
-
         const json = await res.json();
 
         const imoveis = json?.data?.imoveis || [];
+        listOwnerEmail = listOwnerEmail || json?.data?.user?.email;
 
         const exists = imoveis.some(
-          (item) => Number(item.id_imovel) === Number(id),
+          (item) => Number(item.id_imovel) === Number(id)
         );
+        const isOwner = email && listOwnerEmail && email === listOwnerEmail;
 
+        setOwner(isOwner);
         setIsFavorite(exists);
       } catch (err) {}
     };
@@ -59,8 +63,6 @@ const AddFavorite = ({ id }) => {
   const handleToggleFavorite = async () => {
     let listId = localStorage.getItem("listId");
     const email = localStorage.getItem("userEmail");
-    console.log("listId",listId);
-    console.log("email",email)
 
     if (!email || !listId) {
       localStorage.setItem("favorite_item_add", id);
@@ -69,7 +71,6 @@ const AddFavorite = ({ id }) => {
 
     if (!listId) {
       const res = await fetch(`${baseUrl}/favorites/lists/user/${email}`);
-
       const json = await res.json();
 
       listId = json?.data?.lists?.[0]?.id;
@@ -126,7 +127,7 @@ const AddFavorite = ({ id }) => {
 
   const Icon = () => (
     <SVG
-      src={isFavorite ? FavoriteFillIcon : FavoriteOutlineIcon}
+      src={isFavorite && owner ? FavoriteFillIcon : FavoriteOutlineIcon}
       className={
         isFavorite
           ? "search-component-favorite-fill-icon"
@@ -146,14 +147,14 @@ const AddFavorite = ({ id }) => {
           <ToastWrapper>
             <ToastContent>
               <Icon />
-
               <p>
                 {isFavorite
                   ? "Imóvel adicionado aos favoritos"
                   : "Imóvel removido dos favoritos"}
               </p>
-
-              <ToastLink href="/lista-de-favoritos">Meus favoritos</ToastLink>
+              <ToastLink href="/lista-de-favoritos">
+                Meus favoritos
+              </ToastLink>
             </ToastContent>
 
             <ToastClose onClick={() => setShowToast(false)}>
