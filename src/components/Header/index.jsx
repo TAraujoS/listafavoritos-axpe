@@ -18,7 +18,7 @@ import HomeIconSVG from 'assets/icons/vender-imovel.svg';
 import CloudIconSVG from 'assets/icons/sonhar.svg';
 import AxpeFullLogoSVG from 'assets/axpe-full-logo.svg';
 import FavoriteOutlineIcon from 'assets/favorite-outline-icon.svg'
-import FavoriteFillIcon from 'assets/favorite-fill-icon.svg'
+import FavoriteFillIcon from 'assets/favoritos.svg'
 
 // styles
 import {
@@ -59,22 +59,21 @@ function Header() {
     return false;
   });
   const scrollPosition = useScrollPosition();
+  const lighthouseSimulation = localStorage.getItem('lighthouse-simulation');
+  const [listId, setListId] = useState(!!localStorage.getItem('listId'));
 
-  // Detectar Lighthouse para otimizar renderização
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      // Verificar variável global do _document.js
       if (window.isLighthouse) {
         setIsLighthouse(true);
-        return; // Sair imediatamente se detectar
+        return;
       }
       
-      // Verificar localStorage para simulação local
       try {
         const lighthouseSimulation = localStorage.getItem('lighthouse-simulation');
         if (lighthouseSimulation === 'true') {
           setIsLighthouse(true);
-          return; // Sair imediatamente se detectar
+          return; 
         }
       } catch (e) {}
     }
@@ -215,7 +214,7 @@ function Header() {
                 <li>
                   <Link href="/lista-de-favoritos" passHref>
                     <NavMainButton
-                      className="favoritos-menu-item"
+                      className={`favoritos-menu-item ${listId ? 'active' : ''}`}
                       type="favorite"
                       onClick={cancelToggle}
                       id='button-favorite-desktop'

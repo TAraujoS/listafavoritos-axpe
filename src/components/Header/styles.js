@@ -49,10 +49,12 @@ export const Container = styled.header`
   `}
 
   .favoritos-menu-item .favorite-fill-icon,
-  .favoritos-menu-item:hover .favorite-outline-icon {
+  .favoritos-menu-item:hover .favorite-outline-icon,
+  .favoritos-menu-item.active .favorite-outline-icon {
     display: none;
   }
 
+  .favoritos-menu-item.active .favorite-fill-icon,
   .favoritos-menu-item:hover .favorite-fill-icon {
     display: flex;
   }
@@ -346,6 +348,10 @@ export const NavMainButtonSearch = styled.button`
     svg polyline {
       stroke: ${({ theme }) => theme.colors.green};
     }
+
+    svg.favorite-fill-icon path {
+        stroke: none;
+      }
   }
 
   ${(props) => props.active && NavMainButtonSearchActive}
@@ -356,6 +362,10 @@ export const NavMainButtonSearchActive = css`
   svg polyline {
     stroke: ${({ theme }) => theme.colors.green};
   }
+
+  svg.favorite-fill-icon path {
+        stroke: none;
+      }
 
   span {
     color: ${({ theme }) => theme.colors.green};
@@ -400,6 +410,10 @@ export const NavMainButton = styled.a`
       svg path,
       svg polyline {
         stroke: ${({ theme }) => theme.colors.green};
+      }
+
+      svg.favorite-fill-icon path {
+        stroke: none;
       }
     }
 `;

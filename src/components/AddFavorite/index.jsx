@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SVG from "react-inlinesvg";
 
 import FavoriteOutlineIcon from "assets/favorite-outline-icon.svg";
-import FavoriteFillIcon from "assets/favorite-fill-icon.svg";
+import FavoriteFillIcon from "assets/favoritos.svg";
 
 import { useRouter } from "next/router";
 

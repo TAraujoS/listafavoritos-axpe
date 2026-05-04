@@ -6,7 +6,7 @@ import Share from "components/Share";
 import NewsletterFooter from "components/NewsletterFooter";
 import BuildingList from "components/Building/List";
 
-import FavoriteFillIcon from "assets/favorite-fill-icon.svg";
+import FavoriteFillIcon from "assets/favoritos.svg";
 import ShareIconSVG from "assets/icons/share.svg";
 import DeleteListIcon from "assets/delete-list.svg";
 import EditIcon from "assets/icons/edit.svg";
@@ -213,7 +213,7 @@ const MyFavoriteList = () => {
           <FavoriteHeaderTitle>
             <FavoriteHeaderTitleContainer>
               <SVG src={FavoriteFillIcon} />
-              Minha lista de favoritos
+              <p>{listName || "Minha lista de favoritos"}</p>
             </FavoriteHeaderTitleContainer>
           </FavoriteHeaderTitle>
 

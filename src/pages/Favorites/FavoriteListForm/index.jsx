@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import FavoriteFillIcon from "assets/favorite-fill-icon.svg";
+import FavoriteFillIcon from "assets/favoritos.svg";
 import SVG from "react-inlinesvg";
 import { useRouter } from "next/router";
 

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setMain } from 'store/modules/main/actions';
 import SVG from 'react-inlinesvg';
 import FavoriteOutlineIcon from 'assets/favorite-outline-icon.svg'
-import FavoriteFillIcon from 'assets/favorite-fill-icon.svg'
+import FavoriteFillIcon from 'assets/favoritos.svg'
 import Tag from 'components/Tag';
 import * as Caracteristics from 'pages/Building/Datasheet/caracteristics';
 

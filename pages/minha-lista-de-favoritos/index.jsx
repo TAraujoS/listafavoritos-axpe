@@ -8,7 +8,7 @@ import Share from "components/Share";
 import NewsletterFooter from "components/NewsletterFooter";
 
 // assets
-import FavoriteFillIcon from "assets/favorite-fill-icon.svg";
+import FavoriteFillIcon from "assets/favoritos.svg";
 import ShareIconSVG from "assets/icons/share.svg";
 import DeleteListIcon from "assets/delete-list.svg";
 import EditIcon from "assets/icons/edit.svg";
@@ -66,7 +66,7 @@ const MyFavoriteList = () => {
                 src={FavoriteFillIcon}
                 className="search-component-favorite-fill-icon"
               />
-              Minha lista de favoritos
+              <p>{listName || "Minha lista de favoritos"}</p>
             </FavoriteHeaderTitleContainer>
           </FavoriteHeaderTitle>
 
@@ -89,7 +89,7 @@ const MyFavoriteList = () => {
               src={FavoriteFillIcon}
               className="search-component-favorite-fill-icon"
             />
-            Minha lista de favoritos
+            <p>{listName || "Minha lista de favoritos"}</p>
           </FavoriteHeaderTitleContainer>
           <FavoriteOptions className="favorite-options">
             <ShareButtonContainer onClick={toggleShare}>
