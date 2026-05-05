@@ -213,7 +213,7 @@ const MyFavoriteList = () => {
           <FavoriteHeaderTitle>
             <FavoriteHeaderTitleContainer>
               <SVG src={FavoriteFillIcon} />
-              <p>{listName || "Minha lista de favoritos"}</p>
+              Minha lista de favoritos
             </FavoriteHeaderTitleContainer>
           </FavoriteHeaderTitle>
 

@@ -66,7 +66,7 @@ const MyFavoriteList = () => {
                 src={FavoriteFillIcon}
                 className="search-component-favorite-fill-icon"
               />
-              <p>{listName || "Minha lista de favoritos"}</p>
+              Minha lista de favoritos
             </FavoriteHeaderTitleContainer>
           </FavoriteHeaderTitle>
 
@@ -89,7 +89,7 @@ const MyFavoriteList = () => {
               src={FavoriteFillIcon}
               className="search-component-favorite-fill-icon"
             />
-            <p>{listName || "Minha lista de favoritos"}</p>
+            Minha lista de favoritos
           </FavoriteHeaderTitleContainer>
           <FavoriteOptions className="favorite-options">
             <ShareButtonContainer onClick={toggleShare}>
