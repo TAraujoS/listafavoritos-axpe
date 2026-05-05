@@ -60,6 +60,10 @@ export const Container = styled.header`
     stroke: none;
   }
 
+  .favoritos-menu-item svg path {
+    stroke: none !important;
+  }
+
   ${media.greaterThan('large')`
     width: 200px;
     height: 100%;

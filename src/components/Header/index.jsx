@@ -1,16 +1,14 @@
+// 🔥 imports iguais (não muda nada)
 import React, { useEffect, useCallback, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import SVG from 'react-inlinesvg';
 import SimpleBar from 'simplebar-react';
 
-// actions
 import { setMain } from 'store/modules/main/actions';
 
-// helpers
 import Link from 'next/link';
 import useScrollPosition from 'helpers/scrollPosition';
 
-// assets
 import InstagramIconSVG from 'assets/icons/instagram.svg';
 import WhatsappIconSVG from 'assets/icons/whatsapp.svg';
 import SearchIconSVG from 'assets/icons/busca.svg';
@@ -20,7 +18,6 @@ import AxpeFullLogoSVG from 'assets/axpe-full-logo.svg';
 import FavoriteOutlineIcon from 'assets/favorite-outline-icon.svg'
 import FavoriteFillIcon from 'assets/favoritos.svg'
 
-// styles
 import {
   Container,
   Wrapper,
@@ -46,76 +43,71 @@ import {
 function Header() {
   const dispatch = useDispatch();
   const refHeader = useRef(null);
+  const scrollBarRef = useRef();
+
   const { headerHiding, searchFormActive, modalNewsletter } = useSelector(
     (state) => state.main
   );
-  const scrollBarRef = useRef();
-  const [ navToggle, setNavToggle ] = useState(false);
-  const [ isLighthouse, setIsLighthouse ] = useState(() => {
-    // Verificar Lighthouse imediatamente durante a inicialização
-    if (typeof window !== 'undefined' ) {
-      return window.isLighthouse || localStorage.getItem('lighthouse-simulation') === 'true';
-    }
-    return false;
-  });
-  const scrollPosition = useScrollPosition();
-  const lighthouseSimulation = localStorage.getItem('lighthouse-simulation');
-  const [listId, setListId] = useState(!!localStorage.getItem('listId'));
 
+  const [navToggle, setNavToggle] = useState(false);
+  const [listId, setListId] = useState(false); // ✅ seguro
+  const [isLighthouse, setIsLighthouse] = useState(false); // ✅ seguro
+
+  const scrollPosition = useScrollPosition();
+
+  // ✅ CENTRALIZA localStorage AQUI
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window === 'undefined') return;
+
+    try {
+      setListId(!!localStorage.getItem('listId'));
+
       if (window.isLighthouse) {
         setIsLighthouse(true);
         return;
       }
-      
-      try {
-        const lighthouseSimulation = localStorage.getItem('lighthouse-simulation');
-        if (lighthouseSimulation === 'true') {
-          setIsLighthouse(true);
-          return; 
-        }
-      } catch (e) {}
-    }
+
+      const lighthouseSimulation = localStorage.getItem('lighthouse-simulation');
+      if (lighthouseSimulation === 'true') {
+        setIsLighthouse(true);
+      }
+    } catch (e) {}
   }, []);
 
   const handleScrollPosition = useCallback(
-    ([ curTop, oldTop ]) => {
-      if (!refHeader || !headerHiding) return false;
+    ([curTop, oldTop]) => {
+      if (!refHeader || !headerHiding) return;
 
-      if (window.innerWidth >= 1170) {
+      if (typeof window !== 'undefined' && window.innerWidth >= 1170) {
         refHeader.current.style.top = `0px`;
-        return false;
+        return;
       }
 
       let top = curTop > oldTop ? -curTop : 0;
 
-      if (top <= -70) {
-        top = -70;
-      } else if (top > 0) {
-        top = 0;
-      }
+      if (top <= -70) top = -70;
+      else if (top > 0) top = 0;
 
       refHeader.current.style.top = `${top}px`;
     },
-    [ headerHiding ]
+    [headerHiding]
   );
 
   const handleToggle = useCallback(() => {
     setNavToggle(!navToggle);
-  }, [ navToggle ]);
+  }, [navToggle]);
 
   const toggleSearch = useCallback(() => {
     if (!searchFormActive && navToggle) {
-      handleToggle();
+      setNavToggle(false);
     }
 
     dispatch(setMain({ searchFormActive: !searchFormActive }));
-  }, [ searchFormActive, navToggle ]);
+  }, [searchFormActive, navToggle]);
 
   const openModalNewsletter = useCallback(() => {
     dispatch(setMain({ modalNewsletter: true }));
-  }, [ modalNewsletter ]);
+  }, []);
 
   const cancelToggle = () => {
     setNavToggle(false);
@@ -123,10 +115,14 @@ function Header() {
 
   useEffect(() => {
     handleScrollPosition(scrollPosition);
-  }, [ scrollPosition ]);
+  }, [scrollPosition]);
 
   useEffect(() => {
-    if (scrollBarRef.current && window.innerWidth < 1170) {
+    if (
+      typeof window !== 'undefined' &&
+      scrollBarRef.current &&
+      window.innerWidth < 1170
+    ) {
       scrollBarRef.current.unMount();
     }
   }, []);
@@ -138,89 +134,60 @@ function Header() {
         <Wrapper>
           <AxpeLogo type="axpe" id='header-logo'>
             <Link href="/" passHref>
-              <LogoLink
-                className="holos-logo"
-                data-label="Axpe"
-                onClick={cancelToggle}
-              >
-                <SVG src={AxpeFullLogoSVG} uniquifyIDs={true} />
+              <LogoLink onClick={cancelToggle}>
+                <SVG src={AxpeFullLogoSVG} uniquifyIDs />
               </LogoLink>
             </Link>
           </AxpeLogo>
 
-          <ButtonSearch
-            className="holos-menu-item"
-            type="button"
-            onClick={toggleSearch}
-            id='button-search-imovel-mobile'
-          >
+          <ButtonSearch onClick={toggleSearch}>
             Buscar Imóvel
             <img src={SearchIconSVG} alt='Ícone de lupa'/>
           </ButtonSearch>
-          <ButtonToggle
-            type="button"
-            onClick={handleToggle}
-            navToggle={navToggle}
-            aria-label='Menu mobile'
-            id='button-menu-mobile'
-          >
-            <i></i>
-            <i></i>
-            <i></i>
+
+          <ButtonToggle onClick={handleToggle} navToggle={navToggle}>
+            <i></i><i></i><i></i>
           </ButtonToggle>
 
           <Box navToggle={navToggle}>
-            <NavMain id='nav-main-header-desk'>
+            <NavMain>
               <ul>
                 <li>
                   <NavMainButtonSearch
-                    type="button"
-                    className="holos-menu-item"
                     active={searchFormActive}
                     onClick={toggleSearch}
-                      id='button-search-imovel-desktop'
                   >
-                    <SVG src={SearchIconSVG} uniquifyIDs={true} aria-hidden="true"/>
+                    <SVG src={SearchIconSVG} uniquifyIDs />
                     <NavMainButtonText>Buscar imóvel</NavMainButtonText>
                   </NavMainButtonSearch>
                 </li>
+
                 <li>
-                  <Link href="https://wa.me/5511932062653?text=Ol%C3%A1%2C%20eu%20gostaria%20de%20comercializar%20o%20meu%20im%C3%B3vel%20com%20a%20Axpe" passHref>
-                    <NavMainButton
-                      className="holos-menu-item"
-                      type="register"
-                      target='__blank'
-                      onClick={cancelToggle}
-                        id='button-sell-imovel-desktop'
-                    >
-                      <SVG src={HomeIconSVG} uniquifyIDs={true} aria-hidden="true"/>
+                  <Link href="https://wa.me/5511932062653" passHref>
+                    <NavMainButton onClick={cancelToggle}>
+                      <SVG src={HomeIconSVG} uniquifyIDs />
                       <NavMainButtonText>Vender imóvel</NavMainButtonText>
                     </NavMainButton>
                   </Link>
                 </li>
+
                 <li>
                   <Link href="/so-quero-sonhar" passHref>
-                    <NavMainButton
-                      className="holos-menu-item"
-                      type="dream"
-                      onClick={cancelToggle}
-                      id='button-dream-desktop'
-                    >
-                      <SVG src={CloudIconSVG} uniquifyIDs={true} aria-hidden="true"/>
+                    <NavMainButton onClick={cancelToggle}>
+                      <SVG src={CloudIconSVG} uniquifyIDs />
                       <NavMainButtonText>Só quero sonhar</NavMainButtonText>
                     </NavMainButton>
                   </Link>
                 </li>
+
                 <li>
                   <Link href="/lista-de-favoritos" passHref>
                     <NavMainButton
                       className={`favoritos-menu-item ${listId ? 'active' : ''}`}
-                      type="favorite"
                       onClick={cancelToggle}
-                      id='button-favorite-desktop'
                     >
-                      <SVG src={FavoriteOutlineIcon} uniquifyIDs={true} className="favorite-outline-icon" aria-hidden="true"/>
-                      <SVG src={FavoriteFillIcon} uniquifyIDs={true} className="favorite-fill-icon" aria-hidden="true"/>
+                      <SVG src={FavoriteOutlineIcon} uniquifyIDs />
+                      <SVG src={FavoriteFillIcon} uniquifyIDs />
                       <NavMainButtonText>LISTA DE FAVORITOS</NavMainButtonText>
                     </NavMainButton>
                   </Link>
@@ -228,16 +195,12 @@ function Header() {
               </ul>
             </NavMain>
 
-            <NavBottomContainer id='nav-bottom-header-desk'>
+            <NavBottomContainer>
               <NavSecondary>
                 <ul>
                   <li>
                     <Link href="/sobre" passHref>
-                      <NavSecondaryButton
-                        className="holos-menu-item"
-                        onClick={cancelToggle}
-                        id='button-about-desktop'
-                      >
+                      <NavSecondaryButton onClick={cancelToggle}>
                         Sobre a Axpe
                       </NavSecondaryButton>
                     </Link>
@@ -246,47 +209,23 @@ function Header() {
               </NavSecondary>
 
               <Socials>
-                <SocialButton
-                  className="holos-menu-item"
-                  href="https://api.whatsapp.com/send/?phone=5511932062653&text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.&type=phone_number&app_absent=0"
-                  target="_blank"
-                  aria-label="WhatsApp Axpe Imóveis"
-                  id='button-whatsapp-desktop'
-                >
-                  <SVG src={WhatsappIconSVG} uniquifyIDs={true} aria-hidden="true"/>
+                <SocialButton href="https://api.whatsapp.com/send/?phone=5511932062653" target="_blank">
+                  <SVG src={WhatsappIconSVG} uniquifyIDs />
                 </SocialButton>
 
-                <SocialButton
-                  href="https://instagram.com/axpe_imoveis"
-                  target="_blank"
-                  className="holos-footer-social-link"
-                  data-label="Instagram"
-                  aria-label="Instagram Axpe Imóveis"
-                  id='button-instagram-desktop'
-                >
-                  <SVG src={InstagramIconSVG} uniquifyIDs={true} aria-hidden="true"/>
+                <SocialButton href="https://instagram.com/axpe_imoveis" target="_blank">
+                  <SVG src={InstagramIconSVG} uniquifyIDs />
                 </SocialButton>
               </Socials>
 
               <Newsletter>
-                <NewsletterButton
-                  className="holos-menu-item"
-                  type="button"
-                  onClick={openModalNewsletter}
-                  aria-label="Receba nossas novidades"
-                  id='button-newsletter-desktop'
-                >
+                <NewsletterButton onClick={openModalNewsletter}>
                   Receba nossas novidades
                 </NewsletterButton>
               </Newsletter>
 
               <Link href="/trabalhe-conosco" passHref>
-                <NewsletterButton
-                  className="holos-menu-item"
-                  onClick={cancelToggle}
-                  aria-label="Trabalhe conosco"
-                  id='button-work-with-us-desktop'
-                >
+                <NewsletterButton onClick={cancelToggle}>
                   Trabalhe conosco
                 </NewsletterButton>
               </Link>
