@@ -57,6 +57,7 @@ export const Container = styled.header`
   .favoritos-menu-item.active .favorite-fill-icon,
   .favoritos-menu-item:hover .favorite-fill-icon {
     display: flex;
+    stroke: none;
   }
 
   ${media.greaterThan('large')`
